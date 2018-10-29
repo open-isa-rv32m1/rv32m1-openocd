@@ -21,6 +21,7 @@ noinst_LTLIBRARIES += %D%/libtarget.la
 	$(NDS32_SRC) \
 	$(STM8_SRC) \
 	$(INTEL_IA32_SRC) \
+	$(PULPINO_SRC) \
 	%D%/avrt.c \
 	%D%/dsp563xx.c \
 	%D%/dsp563xx_once.c \
@@ -216,5 +217,10 @@ INTEL_IA32_SRC = \
 	%D%/lakemont.h \
 	%D%/x86_32_common.h \
 	%D%/arm_cti.h
+
+PULPINO_SRC = \
+	%D%/rv32m1/rv32m1_tap_mohor.c \
+	%D%/rv32m1/rv32m1_du_adv.c \
+	%D%/rv32m1/rv32m1.c
 
 include %D%/openrisc/Makefile.am
